@@ -1,0 +1,119 @@
+{
+  "task": [
+    { "name": "To Do", "value": "todo", "colorCode": "" },
+    { "name": "To Do", "value": "new", "colorCode": "" },
+    { "name": "Doing", "value": "doing", "colorCode": "" },
+    { "name": "Doing", "value": "inprogress", "colorCode": "" },
+    { "name": "Done", "value": "done", "colorCode": "" },
+    { "name": "Done", "value": "completed", "colorCode": "" },
+    {
+      "name": "Pending QC Approval",
+      "value": "pending qc approval",
+      "colorCode": ""
+    },
+    { "name": "Rejected", "value": "rejected", "colorCode": "" },
+    {
+      "name": "Pending Approval",
+      "value": "pending approval",
+      "colorCode": ""
+    },
+    { "name": "On Hold", "value": "on hold", "colorCode": "" },
+    { "name": "Reviewing", "value": "reviewing", "colorCode": "" },
+    { "name": "Snag Identified", "value": "snag identified", "colorCode": "" },
+    {
+      "name": "Rectification in Progress",
+      "value": "rectification in progress",
+      "colorCode": ""
+    },
+    { "name": "Under Review", "value": "under review", "colorCode": "" },
+    { "name": "Finalized", "value": "finalized", "colorCode": "" },
+    { "name": "Delayed", "value": "delayed", "colorCode": "" },
+    { "name": "Cancelled", "value": "cancelled", "colorCode": "" },
+    { "name": "Closed", "value": "closed", "colorCode": "" }
+  ],
+  "milestone": [
+    { "name": "Active", "value": "active", "colorCode": "text-primary" },
+    {
+      "name": "In Progress",
+      "value": "inprogress",
+      "colorCode": "text-secondary"
+    },
+    { "name": "On Hold", "value": "onhold", "colorCode": "text-warning" },
+    { "name": "Delayed", "value": "delayed", "colorCode": "text-danger" },
+    { "name": "Completed", "value": "completed", "colorCode": "text-success" }
+  ],
+  "inspection": [
+    {
+      "name": "Not Started",
+      "value": "not started",
+      "colorCode": "text-primary"
+    },
+    { "name": "Started", "value": "started", "colorCode": "text-warning" },
+    {
+      "name": "In Progress",
+      "value": "in progress",
+      "colorCode": "text-secondary"
+    },
+    { "name": "Completed", "value": "completed", "colorCode": "text-success" },
+    { "name": "Rejected", "value": "rejected", "colorCode": "text-danger" }
+  ],
+  "observation": [
+    {
+      "name": "Open",
+      "value": "open",
+      "colorCode": "text-primary"
+    },
+    { "name": "Resolved", "value": "resolved", "colorCode": "text-secondary" },
+    { "name": "Closed", "value": "closed", "colorCode": "text-success" }
+  ],
+  "safety": [
+    {
+      "name": "Open",
+      "value": "open",
+      "colorCode": "text-primary"
+    },
+    { "name": "Resolved", "value": "resolved", "colorCode": "text-secondary" },
+    { "name": "Closed", "value": "closed", "colorCode": "text-success" }
+  ],
+  "program": [
+    {
+      "name": "Not Started",
+      "value": "not started",
+      "colorCode": "text-primary"
+    },
+    { "name": "Started", "value": "started", "colorCode": "text-warning" },
+    {
+      "name": "On Hold",
+      "value": "onhold",
+
+      "colorCode": "text-danger"
+    },
+
+    { "name": "Stack", "value": "stack", "colorCode": "text-secondary" },
+    { "name": "Complete", "value": "complete", "colorCode": "text-success" }
+  ],
+  "expense": [
+    {
+      "name": "Initiated",
+      "value": 1,
+      "colorCode": "text-primary"
+    },
+    { "name": "Pending", "value": 2, "colorCode": "text-warning" },
+    {
+      "name": "Approved",
+      "value": 3,
+      "colorCode": "text-success"
+    },
+    { "name": "Rejected", "value": 4, "colorCode": "text-danger" }
+  ],
+  "languageLocalization": [
+    { "code": "en", "value": "en-US", "format": "MM/DD/YYYY" },
+    { "code": "or", "value": "or-IN", "format": "DD/MM/YYYY" },
+    { "code": "hi", "value": "hi-IN", "format": "DD/MM/YYYY" },
+    { "code": "te", "value": "te-IN", "format": "DD/MM/YYYY" },
+    { "code": "ka", "value": "kn-IN", "format": "DD/MM/YYYY" },
+    { "code": "ta", "value": "ta-IN", "format": "DD/MM/YYYY" },
+    { "code": "ar", "value": "ar-SA", "format": "DD/MM/YYYY" },
+    { "code": "ur", "value": "ur-PK", "format": "DD/MM/YYYY" }
+  ]
+}

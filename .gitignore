@@ -39,5 +39,4 @@ backend/package-lock.json
 .yarn/install-state.gz
 .vercel/
 next-env.d.ts
-tsconfig.json
 frontend/react_new_deploy.sh

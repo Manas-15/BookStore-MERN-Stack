@@ -12,7 +12,9 @@ app.use(express.json()); // Middleware to parse JSON bodies
 app.use(cors());
 
 app.get("/", (req, res) => {
-  return res.status(234).send("Welcome to the Book Store Mern Stack server!");
+  return res.send(
+    "API is working 🚀, Welcome to the Book Store Mern Stack server!"
+  );
 });
 
 app.use("/api", userRoute);

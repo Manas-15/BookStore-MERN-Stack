@@ -1,9 +1,9 @@
 // app.js
 import express from "express";
-// import { connectDB } from "./db.js";
+import { connectDB } from "./db.js";
 import cors from "cors";
-// import bookRoute from "./routes/bookRoute.js";
-// import userRoute from "./routes/userRoute.js";
+import bookRoute from "./routes/bookRoute.js";
+import userRoute from "./routes/userRoute.js";
 
 const app = express();
 
@@ -16,10 +16,10 @@ app.get("/", (req, res) => {
 });
 
 // Your API routes
-// app.use("/api/books", bookRoute);
-// app.use("/api", userRoute);
+app.use("/api/books", bookRoute);
+app.use("/api", userRoute);
 
 // Connect to DB
-// connectDB();
+connectDB();
 
 export default app;

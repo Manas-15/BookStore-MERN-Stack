@@ -8,7 +8,17 @@ import userRoute from "./routes/userRoute.js";
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+
+// ✅ Configure CORS properly
+app.use(
+  cors({
+    origin: "https://bookstore-frontend-web.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
+  })
+);
+
+app.use(express.json());
 
 // Test route
 app.get("/", (req, res) => {

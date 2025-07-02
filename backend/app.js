@@ -1,4 +1,4 @@
-//app.js
+// app.js
 import express from "express";
 import { connectDB } from "./db.js";
 import cors from "cors";
@@ -17,8 +17,9 @@ app.get("/", (req, res) => {
   );
 });
 
-app.use("/api", userRoute);
-app.use("/api/books", bookRoute);
+// ✅ ENABLE YOUR ROUTES
+// app.use("/api", userRoute);
+// app.use("/api/books", bookRoute);
 
 connectDB();
 

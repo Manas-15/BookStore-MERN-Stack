@@ -6,17 +6,25 @@ const router = express.Router();
 
 router.post("/signup", async (req, res) => {
   try {
-    if (!req.body.email || !req.body.password) {
+    const { email, password, canLogin } = req.body;
+
+    if (!email || !password) {
       return res
         .status(422)
         .send({ message: "Email and Password are required" });
     }
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const existedUser = await User.findOne({ email });
 
-    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    if (existedUser) {
+      return res.status(422).send({ message: "Email already exists" });
+    }
 
     const newUser = {
-      email: req.body.email,
+      email: email,
       password: hashedPassword,
+      role: "owner",
+      canLogin: canLogin ?? true,
     };
 
     const user = await User.create(newUser);
@@ -50,7 +58,9 @@ router.post("/signin", async (req, res) => {
     );
 
     // Check credentials (NOTE: Insecure — see bcrypt below)
-    if (email !== existedUser.email || !isPasswordMatch) {
+    if (!existedUser.canLogin) {
+      return res.status(403).send({ message: "User is not allowed to login" });
+    } else if (email !== existedUser.email || !isPasswordMatch) {
       return res.status(404).send({ message: "Invalid credentials" });
     }
 

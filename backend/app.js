@@ -2,8 +2,9 @@
 import express from "express";
 import { connectDB } from "./db.js";
 import cors from "cors";
-import bookRoute from "./routes/bookRoute.js";
+// import bookRoute from "./routes/bookRoute.js";
 import userRoute from "./routes/userRoute.js";
+import projectRoute from "./routes/projectRoute.js";
 
 const app = express();
 
@@ -26,8 +27,9 @@ app.get("/", (req, res) => {
 });
 
 // Your API routes
-app.use("/api/books", bookRoute);
 app.use("/api", userRoute);
+app.use("/api/projects", projectRoute);
+// app.use("/api/books", bookRoute);
 
 // Connect to DB
 connectDB();

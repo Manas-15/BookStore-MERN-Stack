@@ -1,7 +1,7 @@
 //server.js
 import express from "express";
 import app from "./app.js";
-import { PORT } from "./config.js";
+import { PORT } from "./utills/config.js";
 
 const server = express();
 

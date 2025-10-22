@@ -5,6 +5,8 @@ import cors from "cors";
 // import bookRoute from "./routes/bookRoute.js";
 import userRoute from "./routes/userRoute.js";
 import projectRoute from "./routes/projectRoute.js";
+import taskRoute from "./routes/taskRoute.js";
+import dprRoute from "./routes/dprRoute.js";
 
 const app = express();
 
@@ -29,6 +31,8 @@ app.get("/", (req, res) => {
 // Your API routes
 app.use("/api", userRoute);
 app.use("/api/projects", projectRoute);
+app.use("/api/tasks", taskRoute);
+app.use("/api/dprs", dprRoute);
 // app.use("/api/books", bookRoute);
 
 // Connect to DB
